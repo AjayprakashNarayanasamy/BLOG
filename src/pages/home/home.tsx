@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 export default function Home() {
- 
+
   return (
-    <div>
-    
+    <div className='bg-emerald-100'>
+    Ajay
     </div>
   );
 }

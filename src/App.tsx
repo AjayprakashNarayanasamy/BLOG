@@ -7,12 +7,15 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import MyErrorBoundaryExample from "./ErrorHandler/errorBoundary";
 
 function App() {
   return (
-    <Suspense fallback={<>Loading...</>}>
-      <RouterProvider router={router}></RouterProvider>
-    </Suspense>
+    <MyErrorBoundaryExample fallback="fallback">
+      <Suspense fallback={<>Loading...</>}>
+        <RouterProvider router={router}></RouterProvider>
+      </Suspense>
+    </MyErrorBoundaryExample>
   );
 }
 

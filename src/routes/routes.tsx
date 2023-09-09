@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import ErrorBoundary from "../ErrorHandler/errorBoundary";
 const Home = lazy(() => import("../pages/home/home"));
 const Login = lazy(() => import("../pages/login/login"));
 const Register = lazy(() => import("../pages/register/register"));
@@ -13,6 +14,7 @@ const ViewSingleBlog = lazy(
   () => import("../pages/viewSingleBlog/viewSingleBlog")
 );
 const RootLayout = lazy(() => import("../layout/rootLayout"));
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -20,24 +22,44 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <ErrorBoundary fallback="fallback">
+            <Home />
+          </ErrorBoundary>
+        ),
       },
       {
         path: "/createblog",
-        element: <CreateBlog />,
+        element: (
+          <ErrorBoundary fallback="fallback">
+            <CreateBlog />
+          </ErrorBoundary>
+        ),
       },
       {
         path: "/viewsingleblog",
-        element: <ViewSingleBlog />,
+        element: (
+          <ErrorBoundary fallback="fallback">
+            <ViewSingleBlog />
+          </ErrorBoundary>
+        ),
       },
     ],
   },
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <ErrorBoundary fallback="fallback">
+        <Login />
+      </ErrorBoundary>
+    ),
   },
   {
     path: "/register",
-    element: <Register />,
+    element: (
+      <ErrorBoundary fallback="fallback">
+        <Register />
+      </ErrorBoundary>
+    ),
   },
 ]);
