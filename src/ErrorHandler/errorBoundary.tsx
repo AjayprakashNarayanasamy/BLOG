@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 type MyProps = {
   fallback: string;
   children: React.ReactNode;
@@ -9,15 +9,14 @@ class MyErrorBoundaryExample extends React.Component<MyProps> {
     error: null,
   };
 
-  static getDerivedStateFromError(error:any) {
+  static getDerivedStateFromError(error: any) {
     // Update state so next render shows fallback UI.
     return { error: error };
   }
 
-  componentDidCatch(error:any, info:any) {
-    console.log("error, info" , error, info )
+  componentDidCatch(error: any, info: any) {
+    console.log("error, info", error, info);
     // Log the error to an error reporting service
-
   }
 
   render() {
@@ -25,7 +24,7 @@ class MyErrorBoundaryExample extends React.Component<MyProps> {
       // You can render any custom fallback UI
       return <p>{this.props.fallback}</p>;
     }
-    return <>{(this.props as any).children}</> ;
+    return <>{(this.props as any).children}</>;
   }
 }
 

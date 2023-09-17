@@ -6,6 +6,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import ErrorBoundary from "../ErrorHandler/errorBoundary";
+// import { NotFound } from "../ErrorHandler";
 const Home = lazy(() => import("../pages/home/home"));
 const Login = lazy(() => import("../pages/login/login"));
 const Register = lazy(() => import("../pages/register/register"));
@@ -14,11 +15,16 @@ const ViewSingleBlog = lazy(
   () => import("../pages/viewSingleBlog/viewSingleBlog")
 );
 const RootLayout = lazy(() => import("../layout/rootLayout"));
+const NotFound = lazy(() => import("../ErrorHandler/notfound"));
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
+    element: (
+      <ErrorBoundary fallback="fallback">
+        <RootLayout />{" "}
+      </ErrorBoundary>
+    ),
     children: [
       {
         path: "/",
@@ -59,6 +65,14 @@ export const router = createBrowserRouter([
     element: (
       <ErrorBoundary fallback="fallback">
         <Register />
+      </ErrorBoundary>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <ErrorBoundary fallback="fallback">
+        <NotFound />
       </ErrorBoundary>
     ),
   },

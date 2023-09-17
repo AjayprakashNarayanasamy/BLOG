@@ -1,1 +1,2 @@
-import ErrorBoundary from "./errorBoundary";
+export * from "./errorBoundary";
+export * from "./notfound";
