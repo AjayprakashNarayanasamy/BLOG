@@ -20,14 +20,15 @@
     border: 1px solid white;
     span {
         font-weight: 900;
-       
     }
-   
 
     .write-blog:hover {
         background-color: white !important;
         border-radius: "0px 50px 50px 50px";
         border: 1px solid teal;
-
     }
+}
+
+.navbar {
+    padding: 20px;
 }

@@ -1,0 +1,24 @@
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px dotted #3498db;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #b9e7e7;
+}
+
+.text {
+  font-weight: 900;
+  color: #333;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  background-color: #b9e7e7;
+  padding: 20px;
+}

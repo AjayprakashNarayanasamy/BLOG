@@ -4,8 +4,8 @@ import "./navbar.scss";
 
 function Navbar() {
   return (
-    <div className="navbar mt-5">
-      <div className="container flex justify-between items-center">
+    <nav className="navbar">
+      <div className="flex justify-between items-center">
         <div className="circle">
           <span
             className="text text-3xl"
@@ -20,7 +20,9 @@ function Navbar() {
             Art & Technology
           </span>
         </div>
-        <div className="links flex gap-3 items-center"> {/* Added 'items-center' class */}
+        <div className="links flex gap-3 items-center">
+          {" "}
+          {/* Added 'items-center' class */}
           <Link to="/?cat&art">
             <h6>ART</h6>
           </Link>
@@ -47,14 +49,14 @@ function Navbar() {
             style={{
               backgroundColor: "#b9e7e7",
               borderRadius: "0px 50px 50px 50px",
-              border: "1px solid white"
+              border: "1px solid white",
             }}
           >
             Write
           </Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
