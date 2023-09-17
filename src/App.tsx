@@ -8,13 +8,13 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import MyErrorBoundaryExample from "./ErrorHandler/errorBoundary";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
     <MyErrorBoundaryExample fallback="fallback">
-      <Suspense fallback={<>Loading...</>}>
-        <RouterProvider router={router}></RouterProvider>
-      </Suspense>
+      <RouterProvider router={router}></RouterProvider>
     </MyErrorBoundaryExample>
   );
 }

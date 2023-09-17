@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 function Navbar() {
+  console.log("Test")
   return (
     <nav className="navbar">
       <div className="flex justify-between items-center">
@@ -44,7 +45,7 @@ function Navbar() {
           <span>Ajay</span>
           <span>Logout</span>
           <Link
-            to="/write"
+            to="/createblog"
             className="p-2 write-blog"
             style={{
               backgroundColor: "#b9e7e7",
@@ -60,4 +61,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default React.memo(Navbar);

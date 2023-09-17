@@ -17,20 +17,26 @@ const ViewSingleBlog = lazy(
 const RootLayout = lazy(() => import("../layout/rootLayout"));
 const NotFound = lazy(() => import("../ErrorHandler/notfound"));
 
+// import RootLayout from "../layout/rootLayout";
+// import Home from "../pages/home/home";
+// import CreateBlog from "../pages/createBlog/createBlog";
+// import ViewSingleBlog from "../pages/viewSingleBlog/viewSingleBlog";
+// import Login from "../pages/login/login";
+// import Register from "../pages/register/register";
+// import NotFound from "../ErrorHandler/notfound";
+
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <ErrorBoundary fallback="fallback">
-        <RootLayout />{" "}
-      </ErrorBoundary>
-    ),
+    element: <RootLayout />,
     children: [
       {
         path: "/",
         element: (
           <ErrorBoundary fallback="fallback">
-            <Home />
+            <Suspense fallback={<>Loading...</>}>
+              <Home />
+            </Suspense>
           </ErrorBoundary>
         ),
       },
@@ -38,15 +44,20 @@ export const router = createBrowserRouter([
         path: "/createblog",
         element: (
           <ErrorBoundary fallback="fallback">
-            <CreateBlog />
+            <Suspense fallback={<>Loading...</>}>
+              {" "}
+              <CreateBlog />
+            </Suspense>
           </ErrorBoundary>
         ),
       },
       {
-        path: "/viewsingleblog",
+        path: "/viewsingleblog/:id",
         element: (
           <ErrorBoundary fallback="fallback">
-            <ViewSingleBlog />
+            <Suspense fallback={<>Loading...</>}>
+              <ViewSingleBlog />
+            </Suspense>
           </ErrorBoundary>
         ),
       },
@@ -56,7 +67,9 @@ export const router = createBrowserRouter([
     path: "/login",
     element: (
       <ErrorBoundary fallback="fallback">
-        <Login />
+        <Suspense fallback={<>Loading...</>}>
+          <Login />
+        </Suspense>
       </ErrorBoundary>
     ),
   },
@@ -64,7 +77,9 @@ export const router = createBrowserRouter([
     path: "/register",
     element: (
       <ErrorBoundary fallback="fallback">
-        <Register />
+        <Suspense fallback={<>Loading...</>}>
+          <Register />
+        </Suspense>
       </ErrorBoundary>
     ),
   },
@@ -72,7 +87,10 @@ export const router = createBrowserRouter([
     path: "*",
     element: (
       <ErrorBoundary fallback="fallback">
-        <NotFound />
+        <Suspense fallback={<>Loading...</>}>
+          {" "}
+          <NotFound />
+        </Suspense>
       </ErrorBoundary>
     ),
   },
