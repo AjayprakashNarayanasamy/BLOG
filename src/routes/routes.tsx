@@ -1,10 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import ErrorBoundary from "../ErrorHandler/errorBoundary";
 // import { NotFound } from "../ErrorHandler";
 const Home = lazy(() => import("../pages/home/home"));
