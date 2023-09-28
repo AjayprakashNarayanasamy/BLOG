@@ -42,7 +42,7 @@ function Navbar() {
           <Link to="/?cat&food">
             <h6>FOOD</h6>
           </Link>
-          <span>Pavithra</span>
+          <span>Ajay</span>
           <span>Logout</span>
           <Link
             to="/createblog"
