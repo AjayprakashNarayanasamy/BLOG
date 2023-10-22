@@ -1,2 +1,2 @@
-export * from "./errorBoundary";
-export * from "./notfound";
+export * from './errorBoundary';
+export * from './notfound';

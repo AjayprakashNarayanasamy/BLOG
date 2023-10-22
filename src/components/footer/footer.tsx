@@ -1,5 +1,5 @@
-import React from "react";
-import "./footers.scss";
+import React from 'react';
+import './footers.scss';
 
 function Footer() {
   return (
@@ -19,7 +19,9 @@ function Footer() {
         </span>
       </div>
       <div className="font-thin">
-        Post Your <b>Blogs</b>
+        Post Your
+        {' '}
+        <b>Blogs</b>
       </div>
     </footer>
   );
