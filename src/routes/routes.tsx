@@ -11,6 +11,7 @@ const ViewSingleBlog = lazy(
 );
 const RootLayout = lazy(() => import("../layout/rootLayout"));
 const NotFound = lazy(() => import("../ErrorHandler/notfound"));
+const WriteBlog = lazy (()=>import("../pages/write/writeBlog"))
 
 // import RootLayout from "../layout/rootLayout";
 // import Home from "../pages/home/home";

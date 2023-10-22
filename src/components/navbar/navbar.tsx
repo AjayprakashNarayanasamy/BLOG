@@ -43,7 +43,16 @@ function Navbar() {
             <h6>FOOD</h6>
           </Link>
           <span>Ajay</span>
-          <span>Logout</span>
+          <Link
+            to="/login"
+           
+            style={{
+             
+              fontWeight:"900"
+            }}
+          >
+            Logout
+          </Link>
           <Link
             to="/createblog"
             className="p-2 write-blog"

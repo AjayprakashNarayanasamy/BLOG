@@ -17,15 +17,15 @@
 }
 .links {
     font-weight: 100;
-    border: 1px solid white;
+
     span {
         font-weight: 900;
     }
 
     .write-blog:hover {
         background-color: white !important;
-        border-radius: "0px 50px 50px 50px";
-        border: 1px solid teal;
+        border-radius: "0px 50px 50px 50px" !important;
+        border: 1px solid teal !important;
     }
 }
 
