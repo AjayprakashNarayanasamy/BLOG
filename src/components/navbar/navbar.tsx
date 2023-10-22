@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 function Navbar() {
-  console.log('Test');
   return (
     <nav className="navbar">
       <div className="flex justify-between items-center">

@@ -6,7 +6,7 @@ import './home.scss';
 
 export default function Home() {
   const [blog, setBlog] = useState<any>([]);
-  console.log('Create');
+
   const fetchBlog = () => {
     setBlog(mockData);
   };
