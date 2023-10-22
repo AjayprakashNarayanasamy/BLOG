@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import "./login.scss";
-//right-panel-active
-const Login = () => {
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import { Link } from 'react-router-dom';
+import './login.scss';
+// right-panel-active
+function Login() {
   return (
     <div className="flex items-center justify-center h-[100vh] login-background">
       <div className="w-full max-w-xs   ">
@@ -28,7 +29,7 @@ const Login = () => {
               type="password"
               placeholder="******************"
             />
-            <p className="text-red-500 text-xs italic"></p>
+            <p className="text-red-500 text-xs italic" />
           </div>
           <div>
             <button
@@ -39,7 +40,8 @@ const Login = () => {
             </button>
           </div>
           <div className="text-center font-colour-login ">
-            Do you have an account already ?{" "}
+            Do you have an account already ?
+            {' '}
             <Link className="underline" to="/register">
               Register
             </Link>
@@ -48,5 +50,5 @@ const Login = () => {
       </div>
     </div>
   );
-};
+}
 export default Login;

@@ -1,12 +1,12 @@
-import "./App.css";
-import { router } from "./routes/routes";
-import { RouterProvider } from "react-router-dom";
-import MyErrorBoundaryExample from "./ErrorHandler/errorBoundary";
+import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/routes';
+import MyErrorBoundaryExample from './ErrorHandler/errorBoundary';
 
 function App() {
   return (
     <MyErrorBoundaryExample fallback="fallback">
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router} />
     </MyErrorBoundaryExample>
   );
 }

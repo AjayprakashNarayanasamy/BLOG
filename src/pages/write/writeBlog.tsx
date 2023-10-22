@@ -1,11 +1,10 @@
 import React from 'react';
 
-function WriteBlog()
-{
-return(
+function WriteBlog() {
+  return (
     <>
     </>
-)
+  );
 }
 
-export default WriteBlog
+export default WriteBlog;

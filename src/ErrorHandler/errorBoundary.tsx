@@ -1,4 +1,6 @@
-import React from "react";
+/*eslint-disable*/
+import React from 'react';
+
 type MyProps = {
   fallback: string;
   children: React.ReactNode;
@@ -11,11 +13,11 @@ class MyErrorBoundaryExample extends React.Component<MyProps> {
 
   static getDerivedStateFromError(error: any) {
     // Update state so next render shows fallback UI.
-    return { error: error };
+    return { error };
   }
 
   componentDidCatch(error: any, info: any) {
-    console.log("error, info", error, info);
+    console.log('error, info', error, info);
     // Log the error to an error reporting service
   }
 

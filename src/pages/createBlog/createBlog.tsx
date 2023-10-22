@@ -1,13 +1,8 @@
 import React from 'react';
 
-function CreateBlog()
-{
-  
-   
-return(
-    <>
-    {}
-    </>
-)
+function CreateBlog() {
+  return (
+    <div />
+  );
 }
-export default CreateBlog
+export default CreateBlog;

@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./navbar.scss";
+/* eslint-disable react/jsx-props-no-multi-spaces */
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.scss';
 
 function Navbar() {
-  console.log("Test")
+  console.log('Test');
   return (
     <nav className="navbar">
       <div className="flex justify-between items-center">
@@ -22,7 +23,7 @@ function Navbar() {
           </span>
         </div>
         <div className="links flex gap-3 items-center">
-          {" "}
+          {' '}
           {/* Added 'items-center' class */}
           <Link to="/?cat&art">
             <h6>ART</h6>
@@ -45,10 +46,10 @@ function Navbar() {
           <span>Ajay</span>
           <Link
             to="/login"
-           
+
             style={{
-             
-              fontWeight:"900"
+
+              fontWeight: '900',
             }}
           >
             Logout
@@ -57,9 +58,9 @@ function Navbar() {
             to="/createblog"
             className="p-2 write-blog"
             style={{
-              backgroundColor: "#b9e7e7",
-              borderRadius: "0px 50px 50px 50px",
-              border: "1px solid white",
+              backgroundColor: '#b9e7e7',
+              borderRadius: '0px 50px 50px 50px',
+              border: '1px solid white',
             }}
           >
             Write
