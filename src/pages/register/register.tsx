@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import './register.scss';
 
 function Register() {
-  const val = 'Ajay';
-  console.log(val);
   return (
     <div className="flex items-center justify-center register-background h-[100vh]">
       <div className="w-full max-w-xs   ">
