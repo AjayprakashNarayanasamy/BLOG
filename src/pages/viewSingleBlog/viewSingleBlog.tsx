@@ -1,7 +1,7 @@
 import React from 'react';
 import "./viewSingleBlog.scss"
-import editicon from "../../assests/edit.png"
-import deleteicon from "../../assests/delete.png"
+// import editicon from "../../assests/edit.png"
+// import deleteicon from "../../assests/delete.png"
 import user from "../../assests/viewPhoto.png"
 
 function ViewSingleBlog()
