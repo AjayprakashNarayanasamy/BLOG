@@ -11,7 +11,7 @@ const ViewSingleBlog = lazy(
 );
 const RootLayout = lazy(() => import('../layout/rootLayout'));
 const NotFound = lazy(() => import('../ErrorHandler/notfound'));
-// const WriteBlog = lazy (()=>import("../pages/write/writeBlog"))
+const WriteBlog = lazy(() => import('../pages/write/writeBlog'));
 
 // import RootLayout from "../layout/rootLayout";
 // import Home from "../pages/home/home";
@@ -43,6 +43,17 @@ export const router = createBrowserRouter([
             <Suspense fallback={<>Loading...</>}>
               {' '}
               <CreateBlog />
+            </Suspense>
+          </ErrorBoundary>
+        ),
+      },
+      {
+        path: '/writeblog',
+        element: (
+          <ErrorBoundary fallback="fallback">
+            <Suspense fallback={<>Loading...</>}>
+              {' '}
+              <WriteBlog />
             </Suspense>
           </ErrorBoundary>
         ),
